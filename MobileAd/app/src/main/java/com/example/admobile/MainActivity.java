@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        String url = "http://10.0.2.2:4000/businesses/register";
+        String endpoint = "businesses/register";
         JSONObject jsonBody = new JSONObject();
         try {
             jsonBody.put("business_name", name);
@@ -59,10 +59,10 @@ public class MainActivity extends AppCompatActivity {
 
             String jsonData = jsonBody.toString();
 
-            NetworkUtils.sendPostRequestAsync(url, jsonData, new NetworkUtils.ApiCallback() {
+            NetworkUtils.sendPostRequestAsync(endpoint, jsonData, new NetworkUtils.ApiCallback() {
                 @Override
                 public void onSuccess(String response) {
-                    Log.d("TAG", "Business registered: " + response);
+                    RedirectToLogin(v);
                 }
 
                 @Override

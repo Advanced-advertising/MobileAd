@@ -7,7 +7,7 @@
     tools:context=".LoginActivity">
 
     <EditText
-        android:id="@+id/editTextTextPassword3"
+        android:id="@+id/PasswordTextViewLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/NameTextViewLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -50,7 +50,7 @@
         android:layout_marginTop="76dp"
         android:text="Don't have an account?"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        app:layout_constraintTop_toBottomOf="@+id/LoginButton" />
 
     <Button
         android:id="@+id/button5"
@@ -60,16 +60,17 @@
         android:onClick="RedirectToRegister"
         android:text="Sign Up!"
         app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        app:layout_constraintTop_toBottomOf="@+id/LoginButton" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/LoginButton"
         android:layout_width="114dp"
         android:layout_height="59dp"
         android:layout_marginStart="148dp"
         android:layout_marginTop="56dp"
+        android:onClick="Login"
         android:text="Submit"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword3" />
+        app:layout_constraintTop_toBottomOf="@+id/PasswordTextViewLogin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
