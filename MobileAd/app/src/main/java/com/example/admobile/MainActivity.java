@@ -19,6 +19,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        TokenManager tokenManager = new TokenManager(this);
+        String token = tokenManager.getAccessToken();
+        if (token != null && !token.equals("")) {
+            Intent intent = new Intent(this, HomeActivity.class);
+            startActivity(intent);
+        }
     }
 
     public void RedirectToLogin(View v) {

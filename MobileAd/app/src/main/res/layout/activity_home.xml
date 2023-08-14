@@ -6,22 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="164dp"
-        android:layout_marginBottom="268dp"
-        android:onClick="LoadingCategories"
-        android:text="Button"
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="90dp"
+        android:minHeight="50dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        tools:layout_editor_absoluteX="0dp">
 
-    <TextView
-        android:id="@+id/TestView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="273dp" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/business_active" />
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/notification" />
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/wallet" />
+        <ImageButton
+            android:id="@+id/imageButton5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5sp"
+            android:backgroundTint="#00FFFFFF"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/profile" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
