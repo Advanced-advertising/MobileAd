@@ -6,4 +6,10 @@
     </style>
 
     <style name="Theme.AdMobile" parent="Base.Theme.AdMobile" />
+    <style name="Theme.AdMobile.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.AdMobile.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.AdMobile.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
