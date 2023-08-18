@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,6 +14,8 @@ import android.widget.TextView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,10 +26,27 @@ public class MainActivity extends AppCompatActivity {
 
         TokenManager tokenManager = new TokenManager(this);
         String token = tokenManager.getAccessToken();
+
         if (token != null && !token.equals("")) {
-            Intent intent = new Intent(this, HomeActivity.class);
-            startActivity(intent);
+            //Intent intent = new Intent(this, HomeActivity.class);
+            //startActivity(intent);
         }
+    }
+
+    public void SetUkrLang(View v) {
+        Resources res = getResources();
+        Configuration config = new Configuration(res.getConfiguration());
+        config.setLocale(new Locale("uk"));
+        res.updateConfiguration(config, res.getDisplayMetrics());
+        recreate();
+    }
+
+    public void SetEngLang(View v) {
+        Resources res = getResources();
+        Configuration config = new Configuration(res.getConfiguration());
+        config.setLocale(new Locale("en"));
+        res.updateConfiguration(config, res.getDisplayMetrics());
+        recreate();
     }
 
     public void RedirectToLogin(View v) {

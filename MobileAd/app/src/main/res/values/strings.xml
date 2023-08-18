@@ -1,23 +1,23 @@
 <resources>
     <string name="app_name">AdMobile</string>
     <!-- Preference Titles -->
-    <string name="messages_header">Messages</string>
-    <string name="sync_header">Sync</string>
+    <string name="messages_header" translatable="false">Messages</string>
+    <string name="sync_header" translatable="false">Sync</string>
 
     <!-- Messages Preferences -->
-    <string name="signature_title">Your signature</string>
-    <string name="reply_title">Default reply action</string>
+    <string name="signature_title" translatable="false">Your signature</string>
+    <string name="reply_title" translatable="false">Default reply action</string>
 
     <!-- Sync Preferences -->
-    <string name="sync_title">Sync email periodically</string>
-    <string name="attachment_title">Download incoming attachments</string>
-    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    <string name="sync_title" translatable="false">Sync email periodically</string>
+    <string name="attachment_title" translatable="false">Download incoming attachments</string>
+    <string name="attachment_summary_on" translatable="false">Automatically download attachments for incoming emails
     </string>
-    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="attachment_summary_off" translatable="false">Only download attachments when manually requested</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_screens_fragment">ScreensFragment</string>
-    <string name="large_text">
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="title_activity_screens_fragment" translatable="false">ScreensFragment</string>
+    <string name="large_text" translatable="false">
         "Material is the metaphor.\n\n"
 
         "A material metaphor is the unifying theory of a rationalized space and a system of motion."
@@ -106,5 +106,23 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings" translatable="false">Settings</string>
+
+    <string name="register_text">Register</string>
+    <string name="name_text">Name</string>
+    <string name="email_text">Email</string>
+    <string name="phone_number_text">Phone number</string>
+    <string name="password_text">Password</string>
+    <string name="repeat_password_text">Repeat password</string>
+    <string name="submit_text">Submit</string>
+    <string name="have_account_text">Already have an account?</string>
+    <string name="sign_in_text">Sign in!</string>
+
+
+    <string name="log_in_text">Login</string>
+    <string name="dont_have_account_text">Don\'t have an account?</string>
+    <string name="sign_up_text">Sign Up!</string>
+
+    <string name="your_screens_text">Your screens</string>
+    <string name="details_text">Details</string>
 </resources>

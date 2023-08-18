@@ -3,10 +3,14 @@ package com.example.admobile;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+
+import java.util.Locale;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -14,6 +18,22 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+    }
+
+    public void SetUkrLang(View v) {
+        Resources res = getResources();
+        Configuration config = new Configuration(res.getConfiguration());
+        config.setLocale(new Locale("uk"));
+        res.updateConfiguration(config, res.getDisplayMetrics());
+        recreate();
+    }
+
+    public void SetEngLang(View v) {
+        Resources res = getResources();
+        Configuration config = new Configuration(res.getConfiguration());
+        config.setLocale(new Locale("en"));
+        res.updateConfiguration(config, res.getDisplayMetrics());
+        recreate();
     }
 
     public void RedirectToRegister(View v) {

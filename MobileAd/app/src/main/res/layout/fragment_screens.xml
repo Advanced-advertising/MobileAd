@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="25sp"
-        android:text="Your screens" />
+        android:text="@string/your_screens_text" />
 
     <ListView
         android:id="@+id/screenListView"
