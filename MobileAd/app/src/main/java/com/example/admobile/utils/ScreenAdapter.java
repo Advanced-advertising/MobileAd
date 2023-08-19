@@ -15,7 +15,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import com.example.admobile.R;
-import com.example.admobile.fragment_screen;
+import com.example.admobile.fragments.FragmentScreen;
 import com.example.admobile.models.Screen;
 
 import java.util.ArrayList;
@@ -49,7 +49,7 @@ public class ScreenAdapter extends ArrayAdapter<Screen> {
 
         detailsButton.setOnClickListener(v -> {
             FragmentManager fragmentManager = ((AppCompatActivity) context).getSupportFragmentManager();
-            Fragment newFragment = new fragment_screen(screen);
+            Fragment newFragment = new FragmentScreen(screen, context);
             fragmentManager.beginTransaction()
                     .replace(R.id.framelayout, newFragment)
                     .addToBackStack(null)

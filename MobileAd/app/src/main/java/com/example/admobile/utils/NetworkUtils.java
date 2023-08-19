@@ -114,7 +114,6 @@ public class NetworkUtils {
 
     public static void sendPostRequestWithToken(String endpoint, String token, String json, final ApiCallback callback) {
         MediaType JSON = MediaType.get("application/json; charset=utf-8");
-
         RequestBody body = RequestBody.create(json, JSON);
 
         String authHeader = "Bearer " + token;
