@@ -1,4 +1,4 @@
-package com.example.admobile;
+package com.example.admobile.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;

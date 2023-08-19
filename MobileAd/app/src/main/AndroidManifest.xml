@@ -18,7 +18,7 @@
         android:theme="@style/Theme.AdMobile"
         tools:targetApi="31" >
         <activity
-            android:name=".ScreensFragment"
+            android:name=".fragments.ScreensFragment"
             android:exported="false"
             android:label="@string/title_activity_screens_fragment"
             android:theme="@style/Theme.AdMobile.NoActionBar" />

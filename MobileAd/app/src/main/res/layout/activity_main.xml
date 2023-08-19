@@ -113,7 +113,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/ukrButton"
+        android:id="@+id/ukrButtonProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -125,14 +125,14 @@
         app:srcCompat="@drawable/ukraine_lang" />
 
     <ImageButton
-        android:id="@+id/engButton"
+        android:id="@+id/engButtonProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="4dp"
         android:background="#00FFFFFF"
         android:onClick="SetEngLang"
-        app:layout_constraintEnd_toStartOf="@+id/ukrButton"
+        app:layout_constraintEnd_toStartOf="@+id/ukrButtonProfile"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/united_states_lang" />
 

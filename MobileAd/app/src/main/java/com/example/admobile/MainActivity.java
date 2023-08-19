@@ -12,6 +12,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.admobile.utils.NetworkUtils;
+import com.example.admobile.utils.TokenManager;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -28,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
         String token = tokenManager.getAccessToken();
 
         if (token != null && !token.equals("")) {
-            //Intent intent = new Intent(this, HomeActivity.class);
-            //startActivity(intent);
+            Intent intent = new Intent(this, HomeActivity.class);
+            startActivity(intent);
         }
     }
 

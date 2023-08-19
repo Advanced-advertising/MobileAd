@@ -1,4 +1,4 @@
-package com.example.admobile;
+package com.example.admobile.utils;
 
 import android.os.AsyncTask;
 import android.util.Base64;
@@ -112,10 +112,10 @@ public class NetworkUtils {
     }
 
 
-    public static void sendPostRequestWithToken(String endpoint, String token, JSONObject requestBody, final ApiCallback callback) {
+    public static void sendPostRequestWithToken(String endpoint, String token, String json, final ApiCallback callback) {
         MediaType JSON = MediaType.get("application/json; charset=utf-8");
 
-        RequestBody body = RequestBody.create(requestBody.toString(), JSON);
+        RequestBody body = RequestBody.create(json, JSON);
 
         String authHeader = "Bearer " + token;
         String url = BASEURL + endpoint;

@@ -125,4 +125,12 @@
 
     <string name="your_screens_text">Your screens</string>
     <string name="details_text">Details</string>
+
+    <string name="your_profile_text">Your profile</string>
+    <string name="categories_text">Categories</string>
+    <string name="save_text">Save</string>
+    <string name="language_text">Language</string>
+    <string name="logout_text">Logout</string>
+    <string name="current_password_text">Current password</string>
+    <string name="new_password_text">New password</string>
 </resources>

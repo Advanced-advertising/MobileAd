@@ -4,20 +4,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
-import android.widget.ListView;
 
-public class HomeActivity extends AppCompatActivity {
+import com.example.admobile.fragments.FragmentInteractionListener;
+import com.example.admobile.fragments.ProfileFragment;
+import com.example.admobile.fragments.ScreensFragment;
+import com.example.admobile.utils.TokenManager;
+
+public class HomeActivity extends AppCompatActivity implements FragmentInteractionListener {
     private ImageButton businessButton;
     private ImageButton notificationButton;
     private ImageButton walletButton;
     private ImageButton profileButton;
     private FrameLayout frameLayout;
+    private Fragment currentFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,30 +33,28 @@ public class HomeActivity extends AppCompatActivity {
         profileButton = findViewById(R.id.profileButton);
 
         loadScreenFragment();
-        businessButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                loadScreenFragment();
-            }
+        businessButton.setOnClickListener(view -> {
+            setDefaultButtonImage();
+            businessButton.setImageResource(R.drawable.business_active);
+            loadScreenFragment();
         });
-        notificationButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-            }
+        notificationButton.setOnClickListener(view -> {
+            setDefaultButtonImage();
+            notificationButton.setImageResource(R.drawable.notification_active);
         });
-        walletButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-            }
+        walletButton.setOnClickListener(view -> {
+            setDefaultButtonImage();
+            walletButton.setImageResource(R.drawable.wallet_active);
         });
-        profileButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-            }
+        profileButton.setOnClickListener(view -> {
+            setDefaultButtonImage();
+            profileButton.setImageResource(R.drawable.profile_active);
+            loadProfileFragment();
         });
     }
 
     private void setNewFragment(Fragment newFragment) {
+        currentFragment = newFragment;
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.framelayout, newFragment);
         ft.addToBackStack(null); // Replace fragment
@@ -65,24 +66,33 @@ public class HomeActivity extends AppCompatActivity {
         setNewFragment(screensFragment);
     }
 
+    private void loadProfileFragment() {
+        ProfileFragment profileFragment = new ProfileFragment(this);
+        setNewFragment(profileFragment);
+    }
 
-    public void LoadingCategories(View v) {
-        String endpoint = "categories/get_all";
+    public void setDefaultButtonImage() {
+        businessButton.setImageResource(R.drawable.business);
+        profileButton.setImageResource(R.drawable.profile);
+        notificationButton.setImageResource(R.drawable.notification);
+        walletButton.setImageResource(R.drawable.wallet);
+    }
 
+    @Override
+    public void onRefreshRequested() {
+        if (currentFragment instanceof ProfileFragment) {
+            loadProfileFragment();
+        } else if (currentFragment instanceof ScreensFragment) {
+            loadScreenFragment();
+        }
+    }
+
+    @Override
+    public void onLogout() {
         TokenManager tokenManager = new TokenManager(this);
-        String token = tokenManager.getAccessToken();
-        Log.d("TAG", "Error: " + token);
+        tokenManager.clearToken();
 
-        NetworkUtils.sendGetRequestWithTokenAndJson(endpoint, token, "", new NetworkUtils.ApiCallback() {
-            @Override
-            public void onSuccess(String response) {
-                Log.d("TAG", "categories: " + response);
-            }
-
-            @Override
-            public void onFailure(String errorMessage) {
-                Log.d("TAG", "Error: " + errorMessage);
-            }
-        });
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
     }
 }

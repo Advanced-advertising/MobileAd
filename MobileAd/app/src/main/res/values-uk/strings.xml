@@ -18,4 +18,13 @@
 
     <string name="your_screens_text">Ваші екрани</string>
     <string name="details_text">Детальніше</string>
+
+    <string name="your_profile_text">Ваш профіль</string>
+    <string name="categories_text">Категорії</string>
+    <string name="save_text">Зберегти</string>
+    <string name="language_text">Мова</string>
+    <string name="logout_text">Вийти</string>
+
+    <string name="current_password_text">Поточний пароль</string>
+    <string name="new_password_text">Новий пароль</string>
 </resources>

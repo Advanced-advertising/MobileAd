@@ -1,4 +1,4 @@
-package com.example.admobile;
+package com.example.admobile.fragments;
 
 import android.os.Bundle;
 
@@ -9,6 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import com.example.admobile.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
