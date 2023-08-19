@@ -27,4 +27,11 @@
 
     <string name="current_password_text">Поточний пароль</string>
     <string name="new_password_text">Новий пароль</string>
+
+    <string name="advertising_text">Реклама</string>
+    <string name="screen_name_text">Назва екрана</string>
+    <string name="price_per_time_text">Ціна за 30 секунд</string>
+    <string name="characteristics_text">Xарактеристики</string>
+    <string name="traffic_text">Трафік</string>
+    <string name="address_text">Адреса</string>
 </resources>

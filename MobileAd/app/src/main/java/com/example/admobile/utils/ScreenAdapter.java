@@ -10,8 +10,12 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.example.admobile.R;
+import com.example.admobile.fragment_screen;
 import com.example.admobile.models.Screen;
 
 import java.util.ArrayList;
@@ -44,7 +48,12 @@ public class ScreenAdapter extends ArrayAdapter<Screen> {
         detailsButton.setText(R.string.details_text);
 
         detailsButton.setOnClickListener(v -> {
-
+            FragmentManager fragmentManager = ((AppCompatActivity) context).getSupportFragmentManager();
+            Fragment newFragment = new fragment_screen(screen);
+            fragmentManager.beginTransaction()
+                    .replace(R.id.framelayout, newFragment)
+                    .addToBackStack(null)
+                    .commit();
         });
 
         return view;

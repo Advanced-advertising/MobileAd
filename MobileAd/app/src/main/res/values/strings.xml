@@ -133,4 +133,11 @@
     <string name="logout_text">Logout</string>
     <string name="current_password_text">Current password</string>
     <string name="new_password_text">New password</string>
+
+    <string name="advertising_text">Advertising</string>
+    <string name="screen_name_text">Screen name</string>
+    <string name="price_per_time_text">Price in 30 seconds</string>
+    <string name="characteristics_text">Characteristics</string>
+    <string name="traffic_text">Traffic</string>
+    <string name="address_text">Address</string>
 </resources>
