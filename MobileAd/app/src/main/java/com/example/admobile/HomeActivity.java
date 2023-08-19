@@ -62,7 +62,7 @@ public class HomeActivity extends AppCompatActivity implements FragmentInteracti
     }
 
     private void loadScreenFragment() {
-        ScreensFragment screensFragment = new ScreensFragment();
+        ScreensFragment screensFragment = new ScreensFragment(this);
         setNewFragment(screensFragment);
     }
 
