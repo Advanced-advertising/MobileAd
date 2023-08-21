@@ -10,6 +10,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageButton;
 
 import com.example.admobile.fragments.FragmentInteractionListener;
+import com.example.admobile.fragments.IncomeFragment;
 import com.example.admobile.fragments.NotificationFragment;
 import com.example.admobile.fragments.ProfileFragment;
 import com.example.admobile.fragments.ScreensFragment;
@@ -47,6 +48,7 @@ public class HomeActivity extends AppCompatActivity implements FragmentInteracti
         walletButton.setOnClickListener(view -> {
             setDefaultButtonImage();
             walletButton.setImageResource(R.drawable.wallet_active);
+            loadIncomeFragment();
         });
         profileButton.setOnClickListener(view -> {
             setDefaultButtonImage();
@@ -76,6 +78,11 @@ public class HomeActivity extends AppCompatActivity implements FragmentInteracti
     private void loadNotificationsFragment() {
         NotificationFragment notificationFragment = new NotificationFragment(this);
         setNewFragment(notificationFragment);
+    }
+
+    private void loadIncomeFragment() {
+        IncomeFragment incomeFragment = new IncomeFragment(this);
+        setNewFragment(incomeFragment);
     }
 
     public void setDefaultButtonImage() {
