@@ -178,6 +178,9 @@ public class ProfileFragment extends Fragment {
 
         for (int i = 0; i < adapter.getCount(); i++) {
             View listItemView = listView.getChildAt(i);
+            if (listItemView == null) {
+                break;
+            }
             CheckBox checkBox = listItemView.findViewById(R.id.category_item);
 
             if (checkBox.isChecked()) {

@@ -34,4 +34,6 @@
     <string name="characteristics_text">Xарактеристики</string>
     <string name="traffic_text">Трафік</string>
     <string name="address_text">Адреса</string>
+
+    <string name="notifications_text">Сповіщення</string>
 </resources>

@@ -140,4 +140,6 @@
     <string name="characteristics_text">Characteristics</string>
     <string name="traffic_text">Traffic</string>
     <string name="address_text">Address</string>
+
+    <string name="notifications_text">Notifications</string>
 </resources>
